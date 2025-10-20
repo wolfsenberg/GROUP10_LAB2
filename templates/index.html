@@ -3,9 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Flask App</title>
+    <meta
+      name="description"
+      content="Commitly - Commit. Collaborate. Create."
+    />
+    <title>Commitly - Login & Register</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Wecome to Flask</h1>
+    <div class="container">
+      <header class="site-section">
+        <h1>Commitly</h1>
+        <p class="tagline">Commit. Collaborate. Create.</p>
+        <p class="member-names">BY BARLAM · CALING · DUNGAO · RABAGO · REYES</p>
+      </header>
+      <main class="form-section">
+        <div class="form-container">
+          <nav class="form-tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="register">Register</button>
+          </nav>
+          <form id="loginForm" class="form active">
+            <h2>Welcome Back!</h2>
+            <fieldset>
+              <legend>Login Credentials</legend>
+              <div class="form-group">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  name="email"
+                  class="form-input"
+                  placeholder="your@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="password"
+                  class="form-input"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <div class="remember-me">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  name="rememberMe"
+                  class="form-checkbox"
+                />
+                <label for="rememberMe" class="checkbox-label"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="submit-btn">Login</button>
+            </fieldset>
+      <p class="form-message" id="loginMessage"></p>
+          </form>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
