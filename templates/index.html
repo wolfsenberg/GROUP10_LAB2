@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Commitly - Commit. Collaborate. Create."
-    />
+    <meta name="description" content="Commitly - Commit. Collaborate. Create."/>
     <title>Commitly - Login & Register</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
+
   <body>
     <div class="container">
       <header class="site-section">
@@ -21,16 +16,20 @@
         <p class="tagline">Commit. Collaborate. Create.</p>
         <p class="member-names">BY BARLAM · CALING · DUNGAO · RABAGO · REYES</p>
       </header>
+
       <main class="form-section">
         <div class="form-container">
           <nav class="form-tabs">
             <button class="tab-btn active" data-tab="login">Login</button>
             <button class="tab-btn" data-tab="register">Register</button>
           </nav>
+
           <form id="loginForm" class="form active">
             <h2>Welcome Back!</h2>
+
             <fieldset>
               <legend>Login Credentials</legend>
+
               <div class="form-group">
                 <label for="loginEmail" class="form-label">Email</label>
                 <input
@@ -43,6 +42,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label for="loginPassword" class="form-label">Password</label>
                 <input
@@ -55,6 +55,7 @@
                   required
                 />
               </div>
+
               <div class="remember-me">
                 <input
                   type="checkbox"
@@ -66,15 +67,19 @@
                   >Remember me</label
                 >
               </div>
+
               <button type="submit" class="submit-btn">Login</button>
             </fieldset>
+
             <p class="form-message" id="loginMessage"></p>
           </form>
 
           <form id="registerForm" class="form">
             <h2>Join Commitly!</h2>
+
             <fieldset>
               <legend>Registration Information</legend>
+
               <div class="form-group">
                 <label for="registerName" class="form-label">Full Name</label>
                 <input
@@ -87,6 +92,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label for="registerEmail" class="form-label">Email</label>
                 <input
@@ -99,6 +105,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label for="registerPassword" class="form-label"
                   >Password</label
@@ -114,6 +121,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label for="registerConfirm" class="form-label"
                   >Confirm Password</label
@@ -129,6 +137,7 @@
                   required
                 />
               </div>
+
               <div class="form-group checkbox">
                 <input
                   type="checkbox"
@@ -137,17 +146,19 @@
                   class="form-checkbox"
                   required
                 />
-                <label for="agreeTerms" class="checkbox-label"
-                  >I agree with terms and conditions</label
-                >
+                <label for="agreeTerms" class="checkbox-label">
+                  I agree with terms and conditions
+                </label>
               </div>
+
               <button type="submit" class="submit-btn">Create Account</button>
             </fieldset>
+
             <p class="form-message" id="registerMessage"></p>
           </form>
         </div>
       </main>
     </div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
