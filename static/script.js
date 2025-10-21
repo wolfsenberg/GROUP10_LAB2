@@ -1,3 +1,4 @@
+//CALING-LOGIN-4
 const tabBtns = document.querySelectorAll('.tab-btn');
 const forms = document.querySelectorAll('.form');
 
@@ -37,6 +38,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   }, 3000);
 });
 
+//DUNGAO-REGISTER-5
 document.getElementById('registerForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const name = document.getElementById('registerName').value;
