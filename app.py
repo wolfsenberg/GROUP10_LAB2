@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from dotenv import load_dotenv
 from config import Config 
 from models.db import db
-from models.user_model import User
+from models.users_model import User
 from flask_migrate import Migrate
 
 import os
